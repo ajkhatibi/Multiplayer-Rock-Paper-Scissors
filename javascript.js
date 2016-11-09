@@ -15,10 +15,28 @@ var config = {
   var paper = 'paper';
   var siccors = 'siccors';
   var clicks = 0;
+  var player1 = '';
+  var player2 = '';
+
+  function setPlayer(){
+  	var buttonValue = $('#button').val().trim();
+  	player1 = buttonValue;
+  	if (player1 === buttonValue){
+  		player2 = "computer"
+  	};
+  	console.log(player1, player2);
+  }
+
+  $('#setPlayer').on('click', function(){
+  	setPlayer();
+
+  })
+
 
   function reset(){
   	if (clicks > 2){
   		$('#battle').empty();
+  		clicks = 0;
   	}
   };
 
