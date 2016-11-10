@@ -25,7 +25,14 @@ var config = {
   		player2 = "computer"
   	};
   	console.log(player1, player2);
+  	database.ref().set({
+  		name: player1
+  	})
   }
+
+  database.ref().on('value', function(snapshot){
+  		console.log(snapshot.child('player1').val());
+  })
 
   $('#setPlayer').on('click', function(){
   	setPlayer();
@@ -39,6 +46,10 @@ var config = {
   		clicks = 0;
   	}
   };
+
+
+  	
+
 
   $('#rock').on('click', function(){
   	$('#battle').append('<p class="rock">rock</p>')
