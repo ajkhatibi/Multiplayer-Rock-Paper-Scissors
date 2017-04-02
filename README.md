@@ -1,8 +1,9 @@
 # Multiplayer-Rock-Paper-Scissors
 
-Technologies
-firebase
-node
-jquery
+Technologies/Platforms
 
-Visit the heroku link to view the functionality. 
+  - firebase
+  - node
+  - jquery
+
+Visit the heroku link https://protected-tundra-31220.herokuapp.com/ to view the functionality. 
